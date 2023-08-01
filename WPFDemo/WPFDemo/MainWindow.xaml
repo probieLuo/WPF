@@ -29,9 +29,19 @@
             <BeginStoryboard Storyboard="{StaticResource MenuClose}"/>
         </EventTrigger>
     </Window.Triggers>
-    
+
     <Grid x:Name="grid" Background="LightGray">
-        <Grid VerticalAlignment="Top" Height="60" Background="#FF1368BD">
+        <!---->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid VerticalAlignment="Top" Height="60" Background="#FF1368BD" Grid.ColumnSpan="2" Grid.Row="0">
             <TextBlock Text="Design com WPF" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" />
             <StackPanel VerticalAlignment="Center" Orientation="Horizontal" HorizontalAlignment="Right">
                 <TextBlock Text="probieluo" VerticalAlignment="Center" FontSize="18" />
@@ -46,7 +56,7 @@
                 </materialDesign:PopupBox>
             </StackPanel>
         </Grid>
-        <Grid x:Name="GridMenu" Width="60" HorizontalAlignment="Left" Background="#FF1B3861">
+        <Grid x:Name="GridMenu" Width="60" HorizontalAlignment="Left" Background="#FF1B3861" Grid.RowSpan="2" Grid.Column="0">
             <StackPanel>
                 <Grid Height="150" Background="White">
                     <Button x:Name="ButtonCloseMenu" Width="60" Height="60" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Top" HorizontalAlignment="Right" Visibility="Collapsed" Click="ButtonCloseMenu_Click">
@@ -56,7 +66,7 @@
                         <materialDesign:PackIcon Foreground="#FF1B3861" Kind="Menu" Width="25" Height="25"/>
                     </Button>
                 </Grid>
-                <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" Foreground="#FF1368BD">
+                <!--<ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" Foreground="#FF1368BD">
                     <ListViewItem Height="60">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon  Kind="ViewDashboard" Width="25" Height="25" Margin="10" VerticalAlignment="Center"/>
@@ -87,8 +97,16 @@
                             <TextBlock Text="Github" VerticalAlignment="Center" Margin="20 10"/>
                         </StackPanel>
                     </ListViewItem>
-                </ListView>
-            </StackPanel>
-        </Grid>
+                </ListView>-->
+        <!-- 绑定Menu -->
+        <ScrollViewer HorizontalAlignment="Stretch" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Grid.Row="1">
+            <StackPanel x:Name="Menu" Margin="10"/>
+        </ScrollViewer>
+
+        </StackPanel>
+    </Grid>
+    <Grid x:Name="frmMain" Grid.Row="1" Grid.Column="1">
+        
+    </Grid>
     </Grid>
 </Window>

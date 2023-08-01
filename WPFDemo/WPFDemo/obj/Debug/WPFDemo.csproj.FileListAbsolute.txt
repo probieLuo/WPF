@@ -23,3 +23,4 @@ G:\userSpace\probie\WPF\WPFDemo\WPFDemo\bin\Debug\Microsoft.Xaml.Behaviors.xml
 G:\userSpace\probie\WPF\WPFDemo\WPFDemo\obj\Debug\App.baml
 G:\userSpace\probie\WPF\WPFDemo\WPFDemo\obj\Debug\WPFDemo.csproj.CopyComplete
 G:\userSpace\probie\WPF\WPFDemo\WPFDemo\obj\Debug\WPFDemo.csprojAssemblyReference.cache
+G:\userSpace\probie\WPF\WPFDemo\WPFDemo\obj\Debug\UserControlMenuItem.g.cs
